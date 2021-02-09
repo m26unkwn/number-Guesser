@@ -40,6 +40,10 @@ const updateScore=(winner)=>{
 //Advance Round Function will take the game forward
 
 const advanceRound=()=>{
-    currentRoundNumber+=1;
+    if (currentRoundNumber<10){
+    currentRoundNumber+=1;}
+    else{
+        return updateScore();
+    }
 }
 advanceRound()
