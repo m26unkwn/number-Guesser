@@ -7,9 +7,12 @@ let currentRoundNumber = 1;
 const generateTarget=()=> Math.floor(Math.random() * 10)
 //generateTarget()
 
-//compareGuesser 
+//compareGuesser It will guess which 
 
 const compareGuesses=(userInput , computerInput, targetNumber)=>{
+    if (userInput > generateTarget){
+        console.log("Enter Value Between 0-9")
+    }
     if ((Math.abs(userInput,targetNumber)) === (Math.abs(computerInput,targetNumber))){
         return true
     }
@@ -21,3 +24,21 @@ const compareGuesses=(userInput , computerInput, targetNumber)=>{
     }
 
 }
+
+//Update Score
+
+const updateScore=(winner)=>{
+    if (winner==="human"){
+        humanScore++;
+    }
+    else{
+        computerScore++
+    }
+}
+
+//Advance Round Function will take the game forward
+
+const advanceRound=()=>{
+    currentRoundNumber+=1;
+}
+advanceRound()
