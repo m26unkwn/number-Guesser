@@ -10,8 +10,8 @@ const generateTarget=()=> Math.floor(Math.random() * 10)
 //compareGuesser It will guess which 
 
 const compareGuesses=(userInput , computerInput, targetNumber)=>{
-    if (userInput > generateTarget){
-        console.log("Enter Value Between 0-9")
+    if (userInput<0 || userInput > 9){
+        alert("Enter Value Between 0-9")
     }
     if ((Math.abs(userInput,targetNumber)) === (Math.abs(computerInput,targetNumber))){
         return true
