@@ -13,6 +13,7 @@ const compareGuesses=(userInput , computerInput, targetNumber)=>{
     if (userInput<0 || userInput > 9){
         alert("Enter Value Between 0-9")
     }
+    while (userInput < 9){
     if ((Math.abs(userInput,targetNumber)) === (Math.abs(computerInput,targetNumber))){
         return true
     }
@@ -22,7 +23,7 @@ const compareGuesses=(userInput , computerInput, targetNumber)=>{
     else{
         return false
     }
-
+}
 }
 
 //Update Score
@@ -31,7 +32,7 @@ const updateScore=(winner)=>{
     if (winner==="human"){
         humanScore++;
     }
-    else{
+    else if(winner ==="computer"){
         computerScore++
     }
 }
